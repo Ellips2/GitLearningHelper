@@ -189,6 +189,7 @@ graph TD;
     modified -- git add --> staged;
     staged -- git commit --> tracked;
     tracked -- Изменения --> modified;
+    staged -- Изменения --> modified;
 ```
 
 ```mermaid

@@ -179,4 +179,15 @@ cat head – узнать, где находится head.
 
 Если нужно передать в аргумент команды хэш последнего коммита, достаточно написать слово «head».
 
+# Статусы файлов
+
+Жизненный цикл файлов в Git:
+
+```mermaid
+graph LR;
+	untracked -- "git add" --> staged (в списке на коммит) + tracked;
+	modified -- "git add" --> staged (в списке на коммит) + tracked;
+	staged (в списке на коммит) + tracked -- "git commit" --> tracked;
+	tracked -- "Изменения" --> modified;
+```
 

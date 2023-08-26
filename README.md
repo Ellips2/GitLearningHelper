@@ -185,10 +185,10 @@ cat head – узнать, где находится head.
 
 ```mermaid
 graph TD;
-    A[untracked] -- git add --> B[staged (в списке на коммит) + tracked];
-    C[modified] -- git add --> B;
-    B -- git commit --> D[tracked];
-    D -- Изменения --> C;
+    untracked -- git add --> staged;
+    modified -- git add --> staged;
+    staged -- git commit --> tracked;
+    tracked -- Изменения --> modified;
 ```
 
 ```mermaid

@@ -184,10 +184,10 @@ cat head – узнать, где находится head.
 Жизненный цикл файлов в Git:
 
 ```mermaid
-graph LR;
-	untracked -- "git add" --> staged (в списке на коммит) + tracked;
-	modified -- "git add" --> staged (в списке на коммит) + tracked;
-	staged (в списке на коммит) + tracked -- "git commit" --> tracked;
-	tracked -- "Изменения" --> modified;
+flowchart TD;
+	A [untracked] -- git add --> B [staged (в списке на коммит) + tracked];
+	C [modified] -- git add --> B;
+	B -- git commit --> D [tracked];
+	D -- Изменения --> C;
 ```
 
